@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>La Cabina - Bar de Artes</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/sintitulo.png" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div id="loading">
+        <h1 style="color: #f8f8f8;">Espere un momento por favor</h1>                        
+        <div id="spinner" class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">Bar de Artes</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#Registro">Registrarse</a>
+                    </li>
+                    <li>
+                        <a href="#redesSociales">Redes Sociales</a>
+                    </li>
+                    <li>
+                        <a href="#tuSugerencia">Tu comentario</a>
+                    </li>
+                    <li>
+                        <a href="#">Eventos</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>La Cabina</h1>
+                        <h3>Bar de artes</h3>
+                                              
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="Registro"></a>
+    <div class="content-section-a">
+        <div class="container1">
+            <form class="form__reg" action="">
+                <h1 class="formulario__titulo">Registrate!</h1>
+                <label for="Nombre" class="formulario__label"> <h4>Nombre</h4></label> <h5 id="campoNombreF">Falta completar Nombre</h5>
+                <input id="Nombre" class="formulario__input" type="text" placeholder="Nombre" required> <br>
+                <label for="Apellido" class="formulario__label"> <h4>Apellido</h4></label><h5 id="campoApellido">Falta completar Apellido</h5>
+                <input id="Apellido" class="formulario__input" type="text" placeholder="Apellido" required> <br>
+                <label for="Email" class="formulario__label"><h4>Email</h4></label> <h5 id="campoEmail">Falta completar Email</h5>
+                <input id="Email" class="formulario__input" type="email" placeholder="Email" required> <br>
+                <label for="Telefono" class="formulario__label"><h4>Telefono</h4></label> <h5 id="campoTelefono">Falta completar Telefono</h5>
+                <input id="Telefono" class="formulario__input" type="number" placeholder="Telefono" required> 
+                
+               
+                <div class="btn_form">
+                    <button id="enviar" type="button" class="boton__formulario">Enviar</button>
+
+                </div>
+            </form>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    <a  name="tuSugerencia"></a>
+    <div class="sugerencias">
+        <section class="comentario">
+            <div class="contenedorComentario" style="padding-top:0px">
+                <h3 class="titulo">Dejanos un comentario!</h3>
+                <form id="formCom" class="formularioSugerencias" action="">
+                    <label for="Nombre" class="formulario__label"> <h4>Nombre</h4></label>
+                     <h5 id="campoNombre">Falta completar nombre</h5>
+                    <input type="text" name="nombre" class="formulario_input" placeholder="Nombre" id="NombreC" required>
+                    <label for="comentario" class="formulario__label"><h4>Tu comentario</h4></label>   <h5 id="campoComentario">Falta completar comentario</h5>
+                    <textarea name="Mensaje" placeholder="Tu comentario" id="Comentario" required></textarea>
+                    <input class="boton__formulario" id="enviarComentario" type="button" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </div>
+    <!-- /.sugerencias -->
+
+	<a  name="redesSociales"></a>
+    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Conectanos:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href=https://www.facebook.com/LaCabinaBarDeArtes/ class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                        </li>
+                        <li>
+                            <a href=https://www.instagram.com/LaCabinaBarDeArtes/ class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+    <!-- modals -->
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-success">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h1><i class="glyphicon glyphicon-ok-sign"></i> Listo</h1>
+                </div>
+                <div class="modal-body" id="success-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-warning">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h1><i class="glyphicon glyphicon-warning-sign"></i>  Alerta</h1>
+                </div>
+                <div class="modal-body">
+                    Ya estas registrado en La Cabina. Revisa tu e-mail para confirmar tus datos.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal fade" id="danger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h1><i class="glyphicon glyphicon-remove-sign"></i> Error</h1>
+                </div>
+                <div class="modal-body">
+                    Ocurrio un error, por favor intentalo de nuevo mas tarde.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- /modals -->
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">Registrarse</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#services">Redes sociales</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#tuSugerencia">Tu comentario</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Soluciones Documentales S.A. 2017</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/index.js"></script>
+</body>
+    
+</html>

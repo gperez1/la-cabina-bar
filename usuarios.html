@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>La Cabina - Bar de Artes</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="img/sintitulo.png" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body style="  background: -webkit-linear-gradient(left, #fff, #fff);
+  background: linear-gradient(to right, #333, #564949);
+  font-family: 'Roboto', sans-serif;">
+
+    <!-- Loading -->
+    <div id="loading">
+        <h1 style="color: #f8f8f8;">Espere un momento por favor</h1>                        
+        <div id="spinner" class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">Bar de Artes</a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<section>
+  <!--for demo wrap-->
+  <div class="botonesDiv" id="botonesDiv">
+    <button type="button" class="boton__entrar" id="verUsuarios" onclick="soloUsuarios()">Usuarios</button>
+    <button type="button" class="boton__entrar" id="verSugerencias" onclick="soloSugerencias()"><i class="fa fa-comments" aria-hidden="true"></i> Sugerencias</button>
+  </div>
+  <div class="comentarios" id="losComentarios" >
+      <ul id="ListaComentarios">
+        
+      </ul>
+  </div>
+
+  <div class="tbl-header" id="header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Telefono</th>
+        </tr>
+      </thead>
+      <!--<tbody id="usuarioTable">
+      
+      </tbody>-->
+    </table>
+  </div>
+  <div class="tbl-content" id="content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody id="usuarioTable">
+      </tbody>
+    </table>
+  </div>
+  <div class="ingresar_usuario" id=ingreseContraseña>
+  <h3><label for="password">Ingrese su contraseña</label></h3>
+  <input class="contraseña_us" type="password" placeholder="contraseña" size="20" required id="contraseñaUs"> 
+    <button id="entrarUs" class="boton__entrar" onclick="ingresoParaUsuarios();">Entrar</button>
+    </div>    
+</section>
+    
+    <!-- modals -->
+    <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-warning">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h1><i class="glyphicon glyphicon-warning-sign"></i>  Alerta</h1>
+                </div>
+                <div class="modal-body" id="warning-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div class="modal fade" id="danger" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-header-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h1><i class="glyphicon glyphicon-remove-sign"></i> Error</h1>
+                </div>
+                <div class="modal-body" id="danger-body">
+                    Ocurrio un error, por favor intentalo de nuevo mas tarde.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- /modals -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/table.js"></script>
+
+</body>
+</html>
