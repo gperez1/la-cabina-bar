@@ -36,7 +36,8 @@ function ingresoParaUsuarios(){
 	 var password= document.getElementById("contraseñaUs").value;
 		
 		if (password ==''){ 
-        alert("Porfavor ingrese su contraseña.");  
+        document.getElementById("warning-body").innerHTML="Por favor ingrese su contraseña";
+        $("#warning").modal();  
 	    } 
  
 	   else{    

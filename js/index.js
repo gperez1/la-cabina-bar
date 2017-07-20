@@ -45,7 +45,6 @@ document.getElementById("enviar").addEventListener("click", function () {
                 //aviso segun codigo
                 switch(response) {
                     case 0:
-                     document.getElementById("modal-body").innerHTML="Ya estas registrado en La Cabina. Revisa tu e-mail para confirmar tus datos.";
                         $("#warning").modal();
                         break;
                     case 1:
