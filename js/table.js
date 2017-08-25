@@ -103,11 +103,20 @@ function ingresoParaUsuarios(){
                 			$("#danger").modal();
                 	}
                 	else{
-	            	    if (response.length== 0){
+                		if (response.length== 0){
 	            	    	var msg=document.createElement("li");
 	            	    	msg.innerHTML="No hay comentarios para mostrar";
 							msg.setAttribute("style","color: red; display:block; font-size:30px;text-align:center;");
 	            	    	document.getElementById("ListaComentarios").appendChild(msg);
+	            	    }
+	            	    else if (response.length== 1){
+	            	    	if (response[0].Nombre=="pswd"){
+		        	         	document.getElementById("danger-body").innerHTML="La contraseña ingresada es incorrecta";
+                        		$("#danger").modal();
+		        	        }
+		        	        else{
+		            	    	llenarComentarios(response);
+		        	        }	            	    	
 	            	    }
 	            	    else{
 	            	    	llenarComentarios(response);

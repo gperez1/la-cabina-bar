@@ -30,7 +30,7 @@
 
 </head>
 
-<body>
+<body onload="init();">
 
     <!-- Loading -->
     <div id="loading">
@@ -70,7 +70,7 @@
                         <a href="#tuSugerencia">Tu comentario</a>
                     </li>
                     <li>
-                        <a href="#">Eventos</a>
+                        <a href="#Eventos">Eventos</a>
                     </li>
                 </ul>
             </div>
@@ -102,6 +102,96 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
+
+    <a  name="Eventos"></a>
+    
+        <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Eventos</h2>
+            <h3 class="section-subheading text-muted">Bandas y Artistas que se presentaron en La Cabina bar.</h3>
+          </div>
+        </div>
+        <div class="row" id="rowContenedor">
+          
+          
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="evento-dialog">
+        <div class="modal-content">
+           <!--<div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div> 
+          </div>-->
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto pantallaEventos">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 id="tituloEvento">Reyes de La Pua</h2>
+                  <p class="item-intro text-muted" id="fechaEvento">9 de Julio</p>
+                  <!-- <img class="img-fluid-modal d-block mx-auto" src="img/portfolio/02-full.jpg" alt=""> -->
+                  
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="myCarousel" data-slide-to="1"></li>
+                      <li data-target="myCarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="img/Eventos/foto1.jpg" alt="Los Angeles" id="img1Evento" style="width:100%;">
+                      </div>
+
+                      <div class="item">
+                        <img src="img/Eventos/foto2.jpg" alt="Chicago" id="img2Evento" style="width:100%;">
+                      </div>
+                    
+                      <div class="item">
+                        <img src="img/Eventos/foto3.jpg" alt="New york" id="img3Evento" style="width:100%;">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>-->
+                  </div>
+
+
+
+                  <p id="descripcionEvento">Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Cerrar Evento</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 	<a  name="Registro"></a>
     <div class="content-section-a">
@@ -248,6 +338,9 @@
                         <li>
                             <a href="#tuSugerencia">Tu comentario</a>
                         </li>
+                        <li>
+                            <a href="#Eventos">Tu comentario</a>
+                        </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Soluciones Documentales S.A. 2017</p>
                 </div>
@@ -257,8 +350,11 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/agency.js"></script>  
+    <script src="js/popper.min.js"></script>
     <script src="js/index.js"></script>
 </body>
     
