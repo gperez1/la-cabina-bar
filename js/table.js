@@ -172,10 +172,107 @@ function soloSugerencias(){
 	document.getElementById("header").style.visibility = "hidden";
 	document.getElementById("content").style.visibility = "hidden";
     document.getElementById("losComentarios").style.display = "block";
+    document.getElementById("formularioEventos").style.display = "none";
+    
 
 }
 function soloUsuarios(){
 	document.getElementById("header").style.visibility = "visible";
 	document.getElementById("content").style.visibility = "visible";
     document.getElementById("losComentarios").style.display = "none";
+    document.getElementById("formularioEventos").style.display = "none";
+
 }
+function soloEventos(){
+	document.getElementById("header").style.visibility = "hidden";
+	document.getElementById("content").style.visibility = "hidden";
+	document.getElementById("losComentarios").style.display = "none";
+	document.getElementById("formularioEventos").style.display = "block";
+
+}
+
+document.getElementById("enviarEv").addEventListener("click", function () {
+    var titulo, fecha, foto1, foto2, foto3, descripcion;
+    titulo = document.getElementById("TituloE").value;
+    fecha = document.getElementById("FechaE").value;
+    foto1 = document.getElementById("Foto1E").value;
+    foto2 = document.getElementById("Foto2E").value;
+    foto3 = document.getElementById("Foto3E").value;
+    descripcion = document.getElementById("DescripcionE").value;
+    document.getElementById("campoTituloEv").style.display = "none";
+    document.getElementById("campoFechaEv").style.display = "none";
+    document.getElementById("campoFotoE").style.display = "none";
+    document.getElementById("campoFotoE2").style.display = "none";
+    document.getElementById("campoFotoE3").style.display = "none";
+    document.getElementById("campoDescripcionEv").style.display = "none";
+
+    if(titulo == ""){
+        //muestro error que falta nombre
+        document.getElementById("campoTituloEv").style.display = "inline-block";
+        return false;
+    }
+    if(fecha == ""){
+        //muestro error que falta nombre
+        document.getElementById("campoFechaEv").style.display = "inline-block";
+
+        return false;
+    }
+    if(foto1 == ""){
+        //muestro error que falta nombre
+        document.getElementById("campoFotoE").style.display = "inline-block";
+
+        return false;
+    }
+     if(foto2 == ""){
+        //muestro error que falta nombre
+        document.getElementById("campoFotoE2").style.display = "inline-block";
+
+        return false;
+    }
+     if(foto3 == ""){
+        //muestro error que falta nombre
+        document.getElementById("campoFotoE3").style.display = "inline-block";
+
+        return false;
+    }
+    if(descripcion == ""){
+        //muestro error que falta nombre
+        document.getElementById("campoDescripcionEv").style.display = "inline-block";
+
+        return false;
+    }
+    if(titulo != "" && fecha != "" && foto1 != "" && foto2 != "" && foto3 != "" && descripcion != ""){
+     alert("No esta disponible en este momento");  
+  /*      this.disabled = true;
+        document.getElementById("loading").style.display = "block";
+        $.ajax({
+            type: "POST",
+            //crossDomain: true,
+            contentType: "application/json; charset=utf-8",
+            url: 'http://www.lacabinabar.com.ar/LaCabinaWS.svc/Registro',
+            data: '{"usr":{"TituloE":"' + titulo + '", "FechaE":"' + fecha + '","Foto1E":"' + foto1 + '","Foto2E":"' + foto2 + '","Foto3E":"' + foto3 + '","DescripcionE":"' + descripcion + '"}}',
+            success: function (dataR) {
+                var response = dataR.d;
+                //aviso segun codigo
+                switch(response) {
+                    case 0:
+                        $("#danger").modal();
+                        break;
+                    case 1:
+                        document.getElementById("success-body").innerHTML="Evento subido exitosamente";
+                        $("#success").modal();
+                        break;
+                    
+                }
+                document.getElementById("enviarEv").disabled = false;
+                document.getElementById("loading").style.display = "none";
+            },
+            error: function (result) {
+                //aviso error
+                $("#danger").modal();                
+                document.getElementById("enviarEv").disabled = false;
+                document.getElementById("loading").style.display = "none";
+            }
+        });*/
+    }
+});

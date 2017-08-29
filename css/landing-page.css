@@ -546,6 +546,46 @@ section{
   padding-left: 15px;
   font-size: 15px;
 }
+#campoTituloEv{
+  color:red;
+  display:none;
+  padding-left: 15px;
+  font-size: 15px;
+}
+#campoFechaEv{
+  color:red;
+  display:none;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+#campoFotoE{
+  color:red;
+  display:none;
+  padding-left: 15px;
+  font-size: 15px;
+}
+#campoFotoE2{
+  color:red;
+  display:none;
+  padding-left: 15px;
+  font-size: 15px;
+}
+#campoFotoE3{
+  color:red;
+  display:none;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+#campoDescripcionEv{
+  color:red;
+  display:none;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
+
 .comentarios{
     background: rgb(58, 58, 58);
     margin:auto;
@@ -739,4 +779,11 @@ float: right;
 }
 .pantallaEventos{
     width: unset;
+}
+
+#formularioEventos{
+    width: 500px;
+    max-width: 50%;
+    margin: auto;
+    display: none; 
 }

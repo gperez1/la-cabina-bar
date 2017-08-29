@@ -65,12 +65,35 @@
   <div class="botonesDiv" id="botonesDiv">
     <button type="button" class="boton__entrar" id="verUsuarios" onclick="soloUsuarios()">Usuarios</button>
     <button type="button" class="boton__entrar" id="verSugerencias" onclick="soloSugerencias()"><i class="fa fa-comments" aria-hidden="true"></i> Sugerencias</button>
+    <button type="button" class="boton__entrar" id="verEventos" onclick="soloEventos()"><i class="fa fa-comments" aria-hidden="true"></i> Ingresar Evento</button>
   </div>
   <div class="comentarios" id="losComentarios" >
       <ul id="ListaComentarios">
         
       </ul>
   </div>
+  <div class="container1" id="formularioEventos">
+            <form class="form__eventos" action="">
+                <h1 class="formulario__titulo">Agrega un evento</h1>
+                <label for="Titulo" class="formulario__label"> <h4>Titulo</h4></label> <h5 id="campoTituloEv">Falta completar Titulo</h5>
+                <input id="TituloE" class="formulario__input" type="text" placeholder="Titulo" required> <br>
+                <label for="Fecha" class="formulario__label"> <h4>Fecha</h4></label><h5 id="campoFechaEv">Falta completar Fecha</h5>
+                <input id="FechaE" class="formulario__input" type="date" required> <br>
+                <label for="Foto" class="formulario__label"> <h4>Foto 1</h4></label><h5 id="campoFotoE">Falta completar Foto</h5>
+                <input id="Foto1E" class="formulario__input" type="file" required> <br>
+                <label for="Foto" class="formulario__label"> <h4>Foto 2</h4></label><h5 id="campoFotoE2">Falta completar Foto</h5>
+                <input id="Foto2E" class="formulario__input" type="file" required> <br>
+                <label for="Foto" class="formulario__label"> <h4>Foto 3</h4></label><h5 id="campoFotoE3">Falta completar Foto</h5>
+                <input id="Foto3E" class="formulario__input" type="file" required> <br>
+                <label for="Email" class="formulario__label"><h4>Descripción</h4></label> <h5 id="campoDescripcionEv">Falta completar descripción</h5> 
+                <textarea  id="DescripcionE" cols="30" rows="10" class="formulario__input"></textarea>   <br>      
+                <div class="btn_form">
+                    <button id="enviarEv" type="button" class="boton__formulario">Enviar</button>
+
+                </div>
+            </form>
+
+        </div>
 
   <div class="tbl-header" id="header">
     <table cellpadding="0" cellspacing="0" border="0">
@@ -95,7 +118,7 @@
   </div>
   <div class="ingresar_usuario" id=ingreseContraseña>
   <h3><label for="password">Ingrese su contraseña</label></h3>
-  <input class="contraseña_us" type="password" placeholder="contraseña" size="20" required id="contraseñaUs"> 
+  <input class="contraseña_us" type="password" placeholder="contraseña" size="20" required id="contraseñaUs" value="password"> 
     <button id="entrarUs" class="boton__entrar" onclick="ingresoParaUsuarios();">Entrar</button>
     </div>    
 </section>
