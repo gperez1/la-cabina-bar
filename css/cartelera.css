@@ -90,7 +90,7 @@ body{
 }
 .fechaEve{
 	font-size: 44px;
-    color: #076277;
+    color: #cccccc;
     padding-top: 21%;
 }
 .contenedorNombre{
@@ -98,7 +98,7 @@ body{
     background-color: rgba(255, 255, 255, 0.33);
     opacity: 0.5;
 	width: 100%;
-    color: #196067;
+    color: #FFF;
     font-family: 'Mada', sans-serif;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 7.5em;
