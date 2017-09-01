@@ -1,0 +1,141 @@
+
+html {
+  background: -webkit-radial-gradient(center ellipse, #9a9a9a 0%, #020401 100%);
+  background: radial-gradient(ellipse at center, #87c5d3 0%, #020401 100%);
+  overflow: hidden;
+}
+
+body{
+	margin: 0px;
+	height: 100%;
+	overflow-y: hidden;
+
+}
+.contenedor{
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+    position: absolute;
+    display: table;
+    
+}
+.contenedorVideo{
+	background: black;
+	display: none;
+}
+.videoCart{
+	width: 100%;
+	max-height: 100%;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.contenedorFoto{
+	width: 100%;
+	max-height: 100%;
+	position: relative;
+	display: none;
+}
+.imagenCart{
+	width: 100%;
+}
+.contenedorEvento{
+	display: none;
+
+}
+.imagenEvento{
+	width: 100%;
+
+}
+.contenedorEvento2{
+	display: none;
+}
+
+.contenedorEvento3{
+	display: none;
+}
+
+.videoCart3{
+    width: 70%;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: table-cell;
+}
+.imagenEvento3{
+	width: 70%;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: table-cell;
+
+}
+.DescripcionEve{
+	margin: 0px;
+       color: #cccccc;
+    padding-top: 30%;
+    padding-right: 10px;
+    font-size: 3.5em;
+}
+.contenedorInfo{
+	width: 27%;
+    margin-top: 0px;
+    height: 100%;
+    float: right;
+    text-align: center;
+    padding-left: 100px;
+    display: table-cell;
+}
+.fechaEve{
+	font-size: 44px;
+    color: #076277;
+    padding-top: 21%;
+}
+.contenedorNombre{
+	background: white;
+    background-color: rgba(255, 255, 255, 0.33);
+    opacity: 0.5;
+	width: 100%;
+    color: #196067;
+    font-family: 'Mada', sans-serif;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 7.5em;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    display: table-row;
+
+}
+.tituloCart{
+	display: inline-block;
+	vertical-align: middle;
+}
+.contenedorVideo3{
+	display: table-row;  
+	height: 70%;
+}
+.videoCart2{
+    width: 70%;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.contenedorEvento4{
+ display: none;
+}
+.contenedorInfoG{
+	background: white;
+    background-color: rgba(255, 255, 255, 0.33);
+    opacity: 1.5;
+    width: 100%;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    margin: auto;
+}

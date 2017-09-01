@@ -787,3 +787,6 @@ float: right;
     margin: auto;
     display: none; 
 }
+.contenedorVideo{
+  width: 100%
+}
