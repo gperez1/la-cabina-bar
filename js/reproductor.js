@@ -28,24 +28,26 @@ var reproductor = {
 	}, 
 	reproducirFoto: function(elemento){
 		var tipoContenedor;
-		if(elemento.tipo=="fotoG"){
+		if(elemento.tipo=="Foto"){
 			tipoContenedor= "G";
 		} 
-		else if (elemento.tipo=="fotoGD") {
+		else if (elemento.tipo=="EventoG") {
 				tipoContenedor="GD";
 		} 
-		else{
+		else if (elemento.tipo=="Evento"){
 			tipoContenedor = "D";
 		}
 		var imagen =document.getElementById("foto"+tipoContenedor);
+		imagen.src =elemento.src;
 		document.getElementById("contenedorFoto"+tipoContenedor).style.display = "block";
 
-	}
+	},
 	cargarPlayList: function(newPlayList){
 		playList = newPlayList;
-		idxMaximo = playList.length-1;
+		reproductor.idxMaximo = playList.length-1;
 	}, 
 	play: function(){
+
 		//reproducir elemento idxReproduciendo
 		//poner un timeout por la duracion del elemento, que cuando termine haga idxReproduciendo++ y reprodusca 
 		setTimeout(reproducir, 10000);
@@ -53,20 +55,52 @@ var reproductor = {
 	stop: function(){
 		//marcar un boolean para que haga stop
 	},
-	reproducir: function(){
-		if(idxReproduciendo==idxMaximo){
-			idxReproduciendo = 0;
+	reproducir: function(){		
+		reproductor.ocultarElemento();					
+		if(playList[reproductor.idxReproduciendo].contenido == "video"){
+			reproductor.reproducirVideo(playList[reproductor.idxReproduciendo]);
+		}
+		else if (playList[reproductor.idxReproduciendo].contenido == "imagen"){
+			reproductor.reproducirFoto(playList[reproductor.idxReproduciendo]);
+		}
+		if(reproductor.idxReproduciendo==reproductor.idxMaximo){
+			reproductor.idxReproduciendo = 0;
 		}
 		else{
-			idxReproduciendo++;
-		}						
-		if(playList[idxReproduciendo].contenido == "video"){
-			reproducirVideo(playList[idxReproduciendo]);
+			reproductor.idxReproduciendo++;
+		}	
+		setTimeout(reproductor.reproducir, playList[reproductor.idxReproduciendo].tiempo*1000);
+	},
+	ocultarElemento(){
+		var numero= reproductor.idxReproduciendo-1;
+		var tipoContenedor;
+		if(numero== -1 ){
+			numero=reproductor.idxMaximo;
 		}
-		else{
-			reproducirFoto
+		var elemento=playList[numero];
+		if (elemento.contenido=="imagen") {
+			if(elemento.tipo=="Foto"){
+				tipoContenedor= "G";
+			} 
+			else if (elemento.tipo=="EventoG") {
+				tipoContenedor="GD";
+			} 
+			else if (elemento.tipo=="Evento"){
+				tipoContenedor = "D";
+			}
+			document.getElementById("contenedorFoto"+tipoContenedor).style.display = "none";
 		}
-
-		setTimeout(reproducir, 10000);
-	}
+		else if(elemento.contenido=="video"){
+			if (elemento.tipo == "VideoG"){
+				tipoContenedor= "G";
+			}
+			else{
+				tipoContenedor="D";
+			}
+			var source = document.getElementById('source'+tipoContenedor);
+			source.src ="";
+			document.getElementById("contenedorVideo"+tipoContenedor).style.display = "none";
+		}
+	},
+	
 }

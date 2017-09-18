@@ -24,7 +24,7 @@ function init(){
             document.getElementById("spinner").style.display = "none";
 		},  
 		error: function (result) {  
-			alert("error: " + result);  
+			alert("error: " + result); 
 		}  
 	});
 }

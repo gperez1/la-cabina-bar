@@ -20,8 +20,8 @@ function init(){
     var EyRoble= new Object();
     EyRoble.id=2;
     EyRoble.titulo= "Ey Roble";
-    EyRoble.fecha= "PROXIMAMENTE 9 de Septiembre";
-    EyRoble.descripcion= "Proximamente en la Cabina, Bar de Artes. Sabado 9 de Septiembre a las 21:30hs no te lo podes perder! Entradas anticipadas en La Cabina Bar o en la administracion del Club Argentino de Castelar";
+    EyRoble.fecha= "9 de Septiembre";
+    EyRoble.descripcion= "En la Cabina, Bar de Artes. Sabado 9 de Septiembre a las 21:30hs junto al Club Argentino de Castelar";
     EyRoble.img1= "img/Eventos/foto7.jpg";
     EyRoble.img2= "img/Eventos/foto8.jpg";
     EyRoble.img3= "img/Eventos/foto9.jpg";
