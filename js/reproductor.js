@@ -50,7 +50,7 @@ var reproductor = {
 
 		//reproducir elemento idxReproduciendo
 		//poner un timeout por la duracion del elemento, que cuando termine haga idxReproduciendo++ y reprodusca 
-		setTimeout(reproducir, 10000);
+
 	},
 	stop: function(){
 		//marcar un boolean para que haga stop
@@ -63,13 +63,13 @@ var reproductor = {
 		else if (playList[reproductor.idxReproduciendo].contenido == "imagen"){
 			reproductor.reproducirFoto(playList[reproductor.idxReproduciendo]);
 		}
+		setTimeout(reproductor.reproducir, playList[reproductor.idxReproduciendo].tiempo*1000);
 		if(reproductor.idxReproduciendo==reproductor.idxMaximo){
 			reproductor.idxReproduciendo = 0;
 		}
 		else{
 			reproductor.idxReproduciendo++;
 		}	
-		setTimeout(reproductor.reproducir, playList[reproductor.idxReproduciendo].tiempo*1000);
 	},
 	ocultarElemento(){
 		var numero= reproductor.idxReproduciendo-1;
@@ -87,7 +87,8 @@ var reproductor = {
 			} 
 			else if (elemento.tipo=="Evento"){
 				tipoContenedor = "D";
-			}
+			} 
+			
 			document.getElementById("contenedorFoto"+tipoContenedor).style.display = "none";
 		}
 		else if(elemento.contenido=="video"){
@@ -97,8 +98,8 @@ var reproductor = {
 			else{
 				tipoContenedor="D";
 			}
-			var source = document.getElementById('source'+tipoContenedor);
-			source.src ="";
+			var video = document.getElementById("video"+tipoContenedor);
+			video.pause();
 			document.getElementById("contenedorVideo"+tipoContenedor).style.display = "none";
 		}
 	},

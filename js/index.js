@@ -34,7 +34,6 @@ function init(){
     addEvento(Lapua);
     addEvento(EyRoble);
 }
-    
 
 document.getElementById("enviar").addEventListener("click", function () {
     var nombre, apellido, email, telefono;
@@ -105,6 +104,7 @@ document.getElementById("enviar").addEventListener("click", function () {
         });
     }
 });
+
 document.getElementById("enviarComentario").addEventListener("click", function (){
     var nombre, comentario;
     nombre = document.getElementById("NombreC").value;

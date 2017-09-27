@@ -16,7 +16,7 @@ var pepe = [
         tipo: "EventoG",
         contenido: "imagen", 
         src:"img/eee.jpg",
-        tiempo: 5,
+        tiempo: 50,
         texto: ["Ey Roble","9 de Septiembre 21:30hs"]
    
     }];
