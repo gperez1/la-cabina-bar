@@ -1,8 +1,20 @@
-window.onload = onLoad;
-window.onresize = onResize;
-
-
 var pepe = [
+    {
+        id: 0,
+        tipo: "VideoG", 
+        contenido: "video",
+        src:"videos/movie.mp4",
+        tiempo: 6,
+        texto: []
+    },
+    {
+        id: 0,
+        tipo: "VideoD", 
+        contenido: "video",
+        src:"videos/movie.mp4",
+        tiempo: 6,
+        texto: ["sadfjhk sdkfj sdkfjhas ksadfjas fidsfhjmsm fdisfhsd fsdihfsd fsdfjukds"]
+    },
     {
         id: 0,
         tipo: "VideoG", 
@@ -16,7 +28,7 @@ var pepe = [
         tipo: "EventoG",
         contenido: "imagen", 
         src:"img/eee.jpg",
-        tiempo: 50,
+        tiempo: 6,
         texto: ["Ey Roble","9 de Septiembre 21:30hs"]
    
     }];

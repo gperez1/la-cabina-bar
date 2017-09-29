@@ -12,12 +12,13 @@ var reproductor = {
 			tipoContenedor="D";
 		}
 	    var source = document.getElementById('source'+tipoContenedor);
-	    var video = document.getElementById("video"+tipoContenedor);
+		var video = document.getElementById("video"+tipoContenedor);
+		video.pause();
 	    source.src = elemento.src;
 	    video.load();
 		video.addEventListener('loadeddata', function() {
 		   //ejecuta cuando termino de cargar
-		   if(video.id.endsWith("G"))
+		   if(terminaCon(video.id,"G")) 
 		   		videoGcargado = true;
 		   else
 		   		videoDcargado = true;
@@ -71,7 +72,7 @@ var reproductor = {
 			reproductor.idxReproduciendo++;
 		}	
 	},
-	ocultarElemento(){
+	ocultarElemento: function(){
 		var numero= reproductor.idxReproduciendo-1;
 		var tipoContenedor;
 		if(numero== -1 ){
@@ -102,6 +103,21 @@ var reproductor = {
 			video.pause();
 			document.getElementById("contenedorVideo"+tipoContenedor).style.display = "none";
 		}
-	},
+	}
+}
+
+function terminaCon(cadena, final){
 	
+	if(cadena.length>final.length){
+		var numero=cadena.length-final.length;
+		var resultado=cadena.substring(numero,cadena.length);
+		if(resultado==final){
+			return true;
+		}else{
+			return false;
+		}
+	}else{
+		return false;
+	}
+
 }

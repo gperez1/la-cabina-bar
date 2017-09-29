@@ -1,10 +1,3 @@
-
-html {
-  background: -webkit-radial-gradient(center ellipse, #9a9a9a 0%, #020401 100%);
-  background: radial-gradient(ellipse at center, #87c5d3 0%, #020401 100%);
-  overflow: hidden;
-}
-
 body{
 	margin: 0px;
 	height: 100%;
