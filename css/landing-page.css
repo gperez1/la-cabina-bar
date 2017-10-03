@@ -715,7 +715,8 @@ float: right;
   border-radius: 0;
   background-clip: border-box;
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none; 
+  background-color: rgba(255, 255, 255, 0.65);}
   .portfolio-modal .modal-content h2 {
     font-size: 3em;
     margin-bottom: 15px; }

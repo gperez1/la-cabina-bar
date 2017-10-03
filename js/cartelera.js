@@ -8,22 +8,6 @@ var pepe = [
         texto: []
     },
     {
-        id: 0,
-        tipo: "VideoD", 
-        contenido: "video",
-        src:"videos/movie.mp4",
-        tiempo: 6,
-        texto: ["sadfjhk sdkfj sdkfjhas ksadfjas fidsfhjmsm fdisfhsd fsdihfsd fsdfjukds"]
-    },
-    {
-        id: 0,
-        tipo: "VideoG", 
-        contenido: "video",
-        src:"videos/movie.mp4",
-        tiempo: 6,
-        texto: []
-    },
-    {
         id: 1,
         tipo: "EventoG",
         contenido: "imagen", 

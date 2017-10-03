@@ -1,9 +1,9 @@
 "use strict"
 function cVideoG(contenedor,video,source,id){
     
-    cSource=document.createElement("source");
-    cVideo=document.createElement("video");
-    divContenedor=document.createElement("div");
+   var cSource=document.createElement("source");
+   var cVideo=document.createElement("video");
+   var divContenedor=document.createElement("div");
 
     cSource.innerHTM=source;
     cVideo.innerHTM=video;
@@ -23,8 +23,8 @@ function cVideoG(contenedor,video,source,id){
       
 }
 function fotoG(img){
-    imagen=document.createElement("img");
-    divImagen=document.createElement("div");
+   var imagen=document.createElement("img");
+   var divImagen=document.createElement("div");
 
     imagen.setAttribute("class","imagenEvento");
     imagen.setAttribute("src",img);
@@ -35,28 +35,28 @@ function fotoG(img){
 
 }
 function cFotoGD(imagen,descripcion,fecha,id){
-    h3Descripcion=document.createElement("h3");
-    pDescripcion=document.createElement("p");
-    h3Fecha=document.createElement("h3");
-    divContenedorInfo=document.createElement("div");
-    img=document.createElement("img");
-    divFotoGD=document.createElement("div");
-    br = document.createElement("br");
+    var h3Descripcion=document.createElement("h3");
+    var pDescripcion=document.createElement("p");
+    var h3Fecha=document.createElement("h3");
+    var divContenedorInfo=document.createElement("div");
+    var img=document.createElement("img");
+    var divFotoGD=document.createElement("div");
+    var br = document.createElement("br");
 
     h3Descripcion.innerHTM=descripcion;
     h3Fecha.innerHTM=fecha;
 
     h3Descripcion.setAttribute("class","fechaEveG");
     pDescripcion.setAttribute("class","DescripcionEveG");
-    pDescripcion.setAttribute("id","DescriFotoGD");
+    pDescripcion.setAttribute("id","DescriFotoGD"+id);
     divContenedorInfo.setAttribute("class","contenedorInfoG");
     img.setAttribute("class","imagenCart");
-    img.setAttribute("id","fotoGD");
+    img.setAttribute("id","fotoGD"+id);
     img.setAttribute("src",imagen);
     img.setAttribute("alt","");
     divFotoGD.setAttribute("class","contenedor");
     divFotoGD.setAttribute("class","contenedorFotoC");
-    divFotoGD.setAttribute("id","contenedorFotoGD");
+    divFotoGD.setAttribute("id","contenedorFotoGD"+id);
 
     pDescripcion.appendChild(h3Descripcion);
     pDescripcion.appendChild(br);
@@ -67,13 +67,13 @@ function cFotoGD(imagen,descripcion,fecha,id){
 
 }
 function cFotoD(imagen,descripcion,fecha,titulo,id){
-    labelTitulo=document.createElement("label");
-    divCNombre=document.createElement("div");
-    h3Fecha=document.createElement("h3");
-    pDescripcion=document.createElement("p");
-    divCInfo=document.createElement("div");
-    img=document.createElement("img");
-    divFotoD.createElement("div");
+    var labelTitulo=document.createElement("label");
+    var divCNombre=document.createElement("div");
+    var h3Fecha=document.createElement("h3");
+    var pDescripcion=document.createElement("p");
+    var divCInfo=document.createElement("div");
+    var img=document.createElement("img");
+    var divFotoD=document.createElement("div");
 
     pDescripcion.innerHTM=descripcion;
     h3Fecha.innerHTM=fecha;
@@ -85,11 +85,11 @@ function cFotoD(imagen,descripcion,fecha,titulo,id){
     pDescripcion.setAttribute("id","fechaFotoConD"+id);
     h3Fecha.setAttribute("class","fechaEve");
     divCInfo.setAttribute("class","contenedorInfo");
-    divCInfo.setAttribute("id","infoFotoConD");
+    divCInfo.setAttribute("id","infoFotoConD"+id);
     labelTitulo.setAttribute("class","tituloCart");
     divNombre.setAttribute("class","contenedorNombre");
     divNombre.setAttribute("id", "nombreVideoConD"+id);
-    img.setAttribute("id","fotoD");
+    img.setAttribute("id","fotoD"+id);
     img.setAttribute("class","imagenEvento3");
     img.setAttribute("src",imagen);
     img.setAttribute("alt","");
@@ -122,21 +122,21 @@ function videoD(video,descripcion,fecha,titulo,id){
 
     divCVideoD.setAttribute("class","contenedor" );
     divCVideoD.setAttribute("class","contenedorEvento4");
-    divCVideoD.setAttribute("id","contenedorVideoD");
+    divCVideoD.setAttribute("id","contenedorVideoD"+id);
     divCVideo.setAttribute("class","contenedorVideo4");
-    divCVideo.setAttribute("id","videoD");
+    divCVideo.setAttribute("id","videoD"+id);
     video.setAttribute("class","videoCart3");
     source.setAttribute("src",video);
     source.setAttribute("type","video/mp4");
-    source.setAttribute("id","sourceVideoD");
+    source.setAttribute("id","sourceVideoD"+id);
     divCinfo.setAttribute("class","contenedorInfo");
-    divCinfo.setAttribute("id","infoVideoConD");
+    divCinfo.setAttribute("id","infoVideoConD"+id);
     pDescripcion.setAttribute("class","descripcionEve");
-    pDescripcion.setAttribute("id","descriVideoConD");
+    pDescripcion.setAttribute("id","descriVideoConD"+id);
     h3Fecha.setAttribute("class","fechaEve");
-    h3Fecha.setAttribute("id","videoConD");
+    h3Fecha.setAttribute("id","videoConD"+id);
     divCNombre.setAttribute("class","contenedorNombre");
-    divCNombre.setAttribute("id","nombreVideoConD");
+    divCNombre.setAttribute("id","nombreVideoConD"+id);
     labelTitulo.setAttribute("class","tituloCart");
 
 
