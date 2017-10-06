@@ -24,6 +24,7 @@ body{
     transform: translateY(-50%);
 }
 .videoCartG{
+    z-index: -1;
 	width: 100%;
 	max-height: 100%;
 	position: absolute;
@@ -141,4 +142,25 @@ body{
     text-align: center;
     margin: auto;
     font-family: 'Mada', sans-serif;
+}
+.horaActual{
+    text-align: center;
+    margin: 0px;
+    float: right;
+    position: absolute;
+    width: 20%;
+    max-width: 20%;
+    min-width:10%;
+    background: rgba(0, 0, 0, 0);
+}
+.clock , .date{
+    color: #FFF !important;
+}
+.contenedorLogo{
+    background: transparent;
+    float: right;
+    position: absolute;
+    z-index: 100000;
+    width: 100%;
+
 }
