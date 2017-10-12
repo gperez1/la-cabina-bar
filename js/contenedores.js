@@ -12,9 +12,9 @@ function cVideoG(elemento){
 
     cSource.setAttribute("src",elemento.src);
     cSource.setAttribute("type","video/mp4");
-    cSource.setAttribute("id",elemento.id);
+    cSource.setAttribute("id","sourceG"+elemento.id);
     cVideo.setAttribute("class","videoCart");
-    cVideo.setAttribute("id",elemento.id);
+    cVideo.setAttribute("id","videoG"+elemento.id);
     divContenedor.setAttribute("class","contenedor");
     divContenedor.setAttribute("class","contenedorVideo");
     divContenedor.setAttribute("id",elemento.id);
@@ -24,8 +24,8 @@ function cVideoG(elemento){
     divContenedor.appendChild(cVideo);
     document.getElementById("bodyC").appendChild(divContenedor);
     
-    cVideoG.load();  
-    video.addEventListener('loadeddata', function() {
+    cVideo.load();  
+    cVideo.addEventListener('loadeddata', function() {
         //ejecuta cuando termino de cargar
         //TODOmarcar que el elemento fue cargado   
         reproductor.playList[elemento.id].cargado=true;
@@ -38,7 +38,7 @@ function fotoG(elemento){
     imagen.setAttribute("class","imagenEvento");
     imagen.setAttribute("src",elemento.src);
     imagen.setAttribute("alt","");
-    imagen.setAttribute("id",elemento.id);
+    imagen.setAttribute("id","fotoG"+elemento.id);
     divImagen.setAttribute("class","contenedor");
     divImagen.setAttribute("class","contenedorFoto");
     divImagen.setAttribute("id",elemento.id);
@@ -61,10 +61,10 @@ function cFotoGD(elemento){
 
     h3Descripcion.setAttribute("class","fechaEveG");
     pDescripcion.setAttribute("class","DescripcionEveG");
-    pDescripcion.setAttribute("id",elemento.id);
+    pDescripcion.setAttribute("id","DescriFotoGD"+elemento.id);
     divContenedorInfo.setAttribute("class","contenedorInfoG");
     img.setAttribute("class","imagenCart");
-    img.setAttribute("id",elemento.id);
+    img.setAttribute("id","fotoGD"+elemento.id);
     img.setAttribute("src",elemento.src);
     img.setAttribute("alt","");
     divFotoGD.setAttribute("class","contenedor");
@@ -96,14 +96,14 @@ function cFotoD(elemento){
     
     
     pDescripcion.setAttribute("class","DescripcionEve");
-    pDescripcion.setAttribute("id",elemento.id);
+    pDescripcion.setAttribute("id","fechaFotoConD"+elemento.id);
     h3Fecha.setAttribute("class","fechaEve");
     divCInfo.setAttribute("class","contenedorInfo");
-    divCInfo.setAttribute("id",elemento.id);
+    divCInfo.setAttribute("id","infoFotoConD"+elemento.id);
     labelTitulo.setAttribute("class","tituloCart");
     divCNombre.setAttribute("class","contenedorNombre");
-    divCNombre.setAttribute("id",elemento.id);
-    img.setAttribute("id",elemento.id);
+    divCNombre.setAttribute("id","nombreFotoConD"+elemento.id);
+    img.setAttribute("id","fotoD"+elemento.id);
     img.setAttribute("class","imagenEvento3");
     img.setAttribute("src",elemento.src);
     img.setAttribute("alt","");
@@ -148,15 +148,15 @@ function videoD(elemento){
     video.setAttribute("id","videoD"+elemento.id);
     source.setAttribute("src",elemento.src);
     source.setAttribute("type","video/mp4");
-    source.setAttribute("id",elemento.id);
+    source.setAttribute("id","descriVideoConD"+elemento.id);
     divCinfo.setAttribute("class","contenedorInfo");
-    divCinfo.setAttribute("id",elemento.id);
+    divCinfo.setAttribute("id","infoVideoConD"+elemento.id);
     pDescripcion.setAttribute("class","descripcionEve");
-    pDescripcion.setAttribute("id",elemento.id);
+    pDescripcion.setAttribute("id","descriVideoConD"+elemento.id);
     h3Fecha.setAttribute("class","fechaEve");
-    h3Fecha.setAttribute("id",elemento.id);
+    h3Fecha.setAttribute("id","fechaVideoConD"+elemento.id);
     divCNombre.setAttribute("class","contenedorNombre");
-    divCNombre.setAttribute("id",elemento.id);
+    divCNombre.setAttribute("id","nombreVideoConD"+elemento.id);
     labelTitulo.setAttribute("class","tituloCart");
 
 

@@ -17,7 +17,10 @@ var reproductor = {
 	    video.load();
 		video.addEventListener('loadeddata', function() {
 		   //ejecuta cuando termino de cargar
-		   
+		   if(terminaCon(video.id,"G")) 
+		   		videoGcargado = true;
+		   else
+		   		videoDcargado = true;
 		   //TODO mover a la funcion que vaya reproduciendo la lista
 	       document.getElementById(elemento.id).style.display ="block";
 	       video.play();
